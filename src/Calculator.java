@@ -9,7 +9,7 @@ public class Calculator {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static int calc() {
+    public static String calc() {
             while (true) {
                 String op1 = "+";
                 String op2 = "-";
@@ -40,28 +40,28 @@ public class Calculator {
                         throw new ArithmeticException();
                     } else if (op.equals(op1)) {
                         int result1 = num1r + num2r;
-                        Roman result = Roman.values()[result1];
+                        String result = String.valueOf(Roman.values()[result1]);
                         System.out.println(result);
-                        return result.ordinal();
+                        return result;
                     } else if (op.equals(op2)) {
                         int result1 = num1r - num2r;
                         if (result1 <= 0) {
                             throw new ArithmeticException();
                         } else {
-                            Roman result = Roman.values()[result1];
+                            String result = String.valueOf(Roman.values()[result1]);
                             System.out.println(result);
-                            return result.ordinal();
+                            return result;
                         }
                     } else if (op.equals(op3)) {
                         int result1 = num1r * num2r;
-                        Roman result = Roman.values()[result1];
+                        String result = String.valueOf(Roman.values()[result1]);
                         System.out.println(result);
-                        return result.ordinal();
+                        return result;
                     } else if (op.equals(op4)) {
                         int result1 = num1r / num2r;
-                        Roman result = Roman.values()[result1];
+                        String result = String.valueOf(Roman.values()[result1]);
                         System.out.println(result);
-                        return result.ordinal();
+                        return result;
                     }
                 } else if (Arrays.asList(Arab).containsAll(Arrays.asList(numbers))) {
                     int num1a = Integer.parseInt(num1.trim());
@@ -72,22 +72,26 @@ public class Calculator {
                     } else if (num2a > 10) {
                         throw new ArithmeticException();
                     } else if (op.equals(op1)) {
-                        int result = num1a + num2a;
+                        int result1 = num1a + num2a;
+                        String result = Integer.toString(result1);
                         System.out.println(result);
                         return result;
 
                     } else if (op.equals(op2)) {
-                        int result = num1a - num2a;
+                        int result1 = num1a - num2a;
+                        String result = Integer.toString(result1);
                         System.out.println(result);
                         return result;
 
                     } else if (op.equals(op3)) {
-                        int result = num1a * num2a;
+                        int result1 = num1a * num2a;
+                        String result = Integer.toString(result1);
                         System.out.println(result);
                         return result;
 
                     } else if (op.equals(op4)) {
-                        int result = num1a / num2a;
+                        int result1 = num1a / num2a;
+                        String result = Integer.toString(result1);
                         System.out.println(result);
                         return result;
                     }
