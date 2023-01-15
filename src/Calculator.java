@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
-        calc();
+        System.out.println("Введите выражение: ");
+        calc(new Scanner(System.in).nextLine());
+
     }
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static String calc() {
+    public static String calc(String s) {
             while (true) {
                 String op1 = "+";
                 String op2 = "-";
@@ -18,10 +20,8 @@ public class Calculator {
                 String[] Roma = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
                 String[] Arab = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 
-                Scanner s1 = new Scanner(System.in);
-                System.out.println("Введите выражение: ");
-                String summ = s1.nextLine();
-                String[] myArray = summ.split(" ");
+
+                String[] myArray = s.split(" ");
                 String num1 = myArray[0];
                 String num2 = myArray[2];
                 String op = myArray[1];
