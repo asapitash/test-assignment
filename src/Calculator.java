@@ -9,8 +9,6 @@ public class Calculator {
 
     }
 
-    static Scanner scanner = new Scanner(System.in);
-
     public static String calc(String s) {
             while (true) {
                 String op1 = "+";
